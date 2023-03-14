@@ -1,10 +1,8 @@
 <?php
 class Logger
 {
-    #ip and GET parameters cannot change during execution
     private string $ip;
     private string $queryString;
-    #this will be passed to constructor
     private string $logPath;
 
     public function __construct($logPath)
