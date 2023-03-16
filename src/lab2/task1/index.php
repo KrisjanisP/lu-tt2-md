@@ -1,5 +1,5 @@
 <?php
-$server = "127.0.0.1:8080";
+$server = "db:3306";
 $database = "mobile";
 $user = "root";
 $password = "example";
@@ -77,7 +77,7 @@ if (!$error) {
 require("view.php");
 
 require("../task2/logger.php");
-$logger = new Logger(getcwd() . "\..\log.txt");
+$logger = new Logger("/logs/log.txt");
 if ($error) {
     $logger->log("ERROR");
 } else {

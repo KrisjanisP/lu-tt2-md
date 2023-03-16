@@ -13,6 +13,7 @@ services:
     image: my-php-fpm:latest
     volumes:
       - ./src:/var/www/html
+      - ./logs:/logs
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
